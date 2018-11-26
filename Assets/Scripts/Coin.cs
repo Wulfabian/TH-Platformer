@@ -26,6 +26,7 @@ public class Coin : MonoBehaviour
                 }
                 else
                 {
+                    //Om det inte funkar så printa ut att ScoreTrackern saknar GameController så att man vet vad som gått fel.
                     Debug.LogError("ScoreTracker saknas på GameController");
                 }
             }
@@ -33,7 +34,7 @@ public class Coin : MonoBehaviour
             {
                 Debug.LogError("GameController finns inte.");
             }
-            
+            //Förstör coinet
             Destroy(gameObject);
 
         }

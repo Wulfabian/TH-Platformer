@@ -5,16 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class KillTrigger : MonoBehaviour
 {
-    public Scene lvl2;
+    public Scene lvl;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
-
+            
+        //Om Killtriggeren nuddar spelaren
         if (collision.tag == "Player")
         {
-            lvl2 = SceneManager.GetActiveScene();
+            //Den hittar den activa scenen, printar sedan "You dead!" Och sen laddar om scenen som den hittade.
+            lvl = SceneManager.GetActiveScene();
             print(" You dead!");
-            SceneManager.LoadScene(lvl2.name);
+            SceneManager.LoadScene(lvl.name);
 
         }
 
