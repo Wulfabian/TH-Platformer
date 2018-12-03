@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class KillTrigger : MonoBehaviour
 {
+    //Denna "public Scene" är ingen bestämd scene utan man får ändra den manuellt
     public Scene lvl;
     private void OnTriggerEnter2D(Collider2D collision)
     {

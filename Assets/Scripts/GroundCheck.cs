@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour
 {
-
+    //inten "touches" använder jag för att hålla koll på hur många object som saken med detta script på rör vid.
     public int touches;
     //När man först nuddar ett object, "TriggerEnter"
     private void OnTriggerEnter2D(Collider2D collision)

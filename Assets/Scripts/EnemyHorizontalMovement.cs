@@ -17,12 +17,6 @@ public class EnemyHorizontalMovement : MonoBehaviour
         Move(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void Move(bool flip)
     {
         //Om flip är lika med sant så ändra isLeft till en falsk isLeft
@@ -34,16 +28,16 @@ public class EnemyHorizontalMovement : MonoBehaviour
         if (isLeft == true)
         {
             //Använd den negativa moveSpeed i X vector
-            rbody.velocity = new Vector2(-moveSpeed, rbody.velocity.y);
+            rbody.velocity = new Vector2(moveSpeed, rbody.velocity.y);
             //Använd possitiv 1 i X,Y och Z
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
         else
         {
             //Här är det tvärt om från där uppe. Här har vi den originella movespeed I rbody.velocity
             //Och -1 I transform.localScale X
-            rbody.velocity = new Vector2(moveSpeed, rbody.velocity.y);
-            transform.localScale = new Vector3(-1, 1, 1);
+            rbody.velocity = new Vector2(-moveSpeed, rbody.velocity.y);
+            transform.localScale = new Vector3(1, 1, 1);
         }
 
     }

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ChickenRoyale : MonoBehaviour
 {
+    //Denna variablen använder jag till funktioner där man har en max score. 
+    //Eller om man når en viss mängd poäng så händer det något.
     public int ScoreNeed;
     //En public string som man kan ändra i unity. Man skriver in namnet på scenen som man sedan vill ladda.
     public string levelToLoad = "SampleScene";

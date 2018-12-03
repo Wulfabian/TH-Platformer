@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
+    //Hur mycket poäng får man per coin
     public int score = 1;
 
     private void OnTriggerEnter2D(Collider2D collision)

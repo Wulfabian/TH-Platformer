@@ -7,7 +7,9 @@ public class ScoreTracker : MonoBehaviour
 {
     //Texten
     public TextMeshProUGUI scoreText;
+    //Hur mycket poäng har man
     public int totalScore;
+    //Vad är max poängen för banan. (Bestämmer man inne i unity)
     public int maxSceneScore;
 
     private void Update()

@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Desert(S3).unity
     guid: 38381a9f6fab40f45bcf3362ee684f73
+  - enabled: 1
+    path: Assets/Scenes/Victory Scene.unity
+    guid: 1b45b6c93eb19ec4f80ae836da692a8b
+  - enabled: 1
+    path: Assets/Scenes/KillingWorld.unity
+    guid: cf767553b2b200d40a350f4e4b336f35
   m_configObjects: {}

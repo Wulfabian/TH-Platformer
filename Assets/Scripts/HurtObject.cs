@@ -17,4 +17,12 @@ public class HurtObject : MonoBehaviour
             //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
+        if (Input.GetKeyDown(KeyCode.K) && (collision.tag == "Items"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
