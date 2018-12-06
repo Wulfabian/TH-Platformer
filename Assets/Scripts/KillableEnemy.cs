@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class KillableEnemy : MonoBehaviour
 { 
-    private void OnTriggerStay2D(Collider2D collision)
+    //Sålänge Objectet nuddar följande
+    private void OnTriggerStay2D(Collider2D other)
     {
-
-        if (Input.GetKeyDown(KeyCode.K) && (collision.tag == "Weapon"))
+        //Om knappen "K" trycks ner och objectet som den nuddar är taggad med "Weapon" så händer .....
+        if (Input.GetKeyDown(KeyCode.K) && (other.tag == "Weapon"))
         {
-            if(collision.gameObject.GetComponent<SpriteRenderer>().enabled == true && collision.gameObject.GetComponent<WeaponSign>() != null)
+            //Om vapnets spriteRenderer är enabled så kommer objectet alltså fienden förstaras
+            if(other.gameObject.GetComponent<SpriteRenderer>().enabled == true && other.gameObject.GetComponent<WeaponSign>() != null)
             {
                 Destroy(gameObject);
             }

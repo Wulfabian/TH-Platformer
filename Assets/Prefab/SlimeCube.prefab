@@ -25,6 +25,8 @@ GameObject:
   - component: {fileID: 114879460187013678}
   - component: {fileID: 50240226948817850}
   - component: {fileID: 114268485757315670}
+  - component: {fileID: 61577397343840724}
+  - component: {fileID: 114641179755177076}
   m_Layer: 0
   m_Name: SlimeCube
   m_TagString: Enemy
@@ -65,6 +67,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &61577397343840724
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1469672286730556}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.000000059604645, y: 0.36391783}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.67936575, y: 0.2677636}
+  m_EdgeRadius: 0
 --- !u!61 &61842596474019742
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -101,6 +128,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7d1a8740058b534ab25a26abb81a38d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114641179755177076
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1469672286730556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f287c66d9fb874191e0e3ea8ed6cc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114879460187013678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,6 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ec00cba0d1d60489c97b1bfe608853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmgdealing: 25
 --- !u!212 &212780375121795796
 SpriteRenderer:
   m_ObjectHideFlags: 1

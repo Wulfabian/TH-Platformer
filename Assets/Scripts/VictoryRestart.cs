@@ -5,16 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class VictoryRestart : MonoBehaviour
 {
+    //En string som gör att man kan välja vilken scene som ska laddas om senare
     public string levelToLoad;
-    // Use this for initialization
-    void Start()
-    {
-
-    }
-
+ 
     // Update is called once per frame
     void Update()
     {
+        //När man klickar space så startade scenen som man valt i unity om
         if (Input.GetKey(KeyCode.Space))
         {
             SceneManager.LoadScene(levelToLoad);

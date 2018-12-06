@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212229079262508196}
   - component: {fileID: 60621278521926840}
   - component: {fileID: 114772641346552798}
+  - component: {fileID: 50922812910528890}
   m_Layer: 0
   m_Name: Spikes
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,12 +37,32 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1614739885982298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4, y: -0.5, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50922812910528890
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614739885982298}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!60 &60621278521926840
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -91,6 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ec00cba0d1d60489c97b1bfe608853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmgdealing: 100
 --- !u!212 &212229079262508196
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -14,14 +14,21 @@ public class PlayerMovement : MonoBehaviour
     public GroundCheck groundCheck;
     //Skapar en Rigidbody2d med namnet rbody
     private Rigidbody2D rbody;
-    public WeaponSign weapon;
-    public bool isleft;
+    //döper Weaponsign scriptet till vapen
+    WeaponSign vapen;
+    //döper PlayerCollect scriptet till platercollect
+    public PlayerCollect playercollect;
+
 
     // Use this for initialization
     void Start()
     {
         //Tar fram Rigidbody2D:n som vi hämtade in i scriptet innan.
         rbody = GetComponent<Rigidbody2D>();
+        //Letar upp scriptet
+        vapen = FindObjectOfType<WeaponSign>();
+        //Letar upp scriptet
+        playercollect = FindObjectOfType<PlayerCollect>();
     }
 
     // Update is called once per frame
@@ -29,7 +36,15 @@ public class PlayerMovement : MonoBehaviour
     {
         //Gör så att man kan styra objectet horisontellt med knapparna "A,D och Arrow left/right" 
         rbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, rbody.velocity.y);
+        //Använd jump funktionen
+                jump();
+        //använder Switchside funktionen
+                Switchside();
 
+    }
+
+    void jump()
+    {
         //Om man klickar på space
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -40,27 +55,20 @@ public class PlayerMovement : MonoBehaviour
                 rbody.velocity = new Vector2(rbody.velocity.x, jumpHeight);
             }
         }
-
-        if (Input.GetAxisRaw("Horizontal") > 0)
-        {
-            isleft = false;
-        }
-
-        if (Input.GetAxisRaw("Horizontal") < 0)
-        {
-            isleft = true;
-        }
-
-
-        if (isleft)
-        {
-            weapon.transform.localPosition = new Vector3(Mathf.Abs(weapon.transform.localPosition.x) * -1, weapon.transform.localPosition.y, weapon.transform.localPosition.z);
-            weapon.transform.localScale = new Vector3(Mathf.Abs(weapon.transform.localScale.x) * -1, weapon.transform.localScale.y, weapon.transform.localScale.z);
-        }
-        if (isleft)
-        {
-            weapon.transform.localPosition = new Vector3(Mathf.Abs(weapon.transform.localPosition.x), weapon.transform.localPosition.y, weapon.transform.localPosition.z);
-            weapon.transform.localScale = new Vector3(Mathf.Abs(weapon.transform.localScale.x), weapon.transform.localScale.y, weapon.transform.localScale.z);
-        }
     }
+    //Skapar en funktion som kommer säga om jag är vänster eller inte vilket jag senare använder i mitt andra script som bestämmer var skyltvapnet ska vara
+        void Switchside()
+        {
+           //Om Horizontal axeln är mer än 0 så sätts vapnets "isleft" till false
+            if (Input.GetAxisRaw("Horizontal") > 0)
+            {
+                vapen.isleft = false;
+            }
+
+            if (Input.GetAxisRaw("Horizontal") < 0)
+            {
+              //Om det är mindre än 0 så sätts det till true
+                vapen.isleft = true;
+            }
+        }
 }

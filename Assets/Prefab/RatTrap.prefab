@@ -57,6 +57,7 @@ GameObject:
   - component: {fileID: 60784821901762572}
   - component: {fileID: 114893968689838434}
   - component: {fileID: 50580951666361914}
+  - component: {fileID: 114261295402876048}
   m_Layer: 0
   m_Name: EnemyRat
   m_TagString: Enemy
@@ -115,7 +116,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1087298694618288}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.93, y: -3.5, z: 0}
+  m_LocalPosition: {x: -4.3899994, y: -6.5200005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4191050843579426}
@@ -255,6 +256,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 953e248009aef3848b2b9bd2f928a1cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114261295402876048
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1593007863486932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d1a8740058b534ab25a26abb81a38d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114334782552440174
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -266,6 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80ec00cba0d1d60489c97b1bfe608853, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dmgdealing: 25
 --- !u!114 &114698958795378594
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -641,4 +641,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22da72495ec785b49bbcc0a44ffef9cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: SampleScene
+  levelToLoad: TutorialScene

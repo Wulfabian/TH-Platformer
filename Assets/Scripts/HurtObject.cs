@@ -5,24 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class HurtObject : MonoBehaviour
 {
+    //En float som jag använder för att bestämma hur mycket objectet ska skada på spelaren
+    public float dmgdealing;
     //När ett object nuddar (kolliderar) med detta object
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
+   // private void OnCollisionEnter2D(Collision2D collision)
+   // {
         //Om obektet som nuddar har tagen "Player" (Alltså vår spelare)
-        if (collision.gameObject.tag == "Player")
-        {
+       // if (collision.gameObject.tag == "Player")
+      //  {
             //Hitta den aktiva scenen och ladda sedan om den.
-            Scene active = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(active.name);
+           // Scene active = SceneManager.GetActiveScene();
+           // SceneManager.LoadScene(active.name);
             //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        
-        if (Input.GetKeyDown(KeyCode.K) && (collision.tag == "Items"))
-        {
-            Destroy(gameObject);
-        }
-    }
+       // }
+   // }
 }

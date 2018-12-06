@@ -44,7 +44,7 @@ public class EnemyHorizontalMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //Om objektet med detta script nuddar ett objekt med taggen "InvisibleWall"
-        if (collision.tag == "InvisibleWall")
+        if ((collision.tag == "InvisibleWall") || (collision.tag == "Player") || (collision.tag == "Weapon"))
         {
             //sätt Move boolen till sant
             Move(true);
